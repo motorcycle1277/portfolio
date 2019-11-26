@@ -8,7 +8,7 @@ try{
 }
 //駅名のセッションを変数にいれる
 if(isset($_SESSION['stationname'])){
-$station = $_SESSION['stationname']
+$station = $_SESSION['stationname'];
 }else{
 exit;
 }
