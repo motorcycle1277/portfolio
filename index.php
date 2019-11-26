@@ -1,3 +1,4 @@
+<?php ini_set('display_errors',1); ?>
 <?php session_start();?>
 <?php require_once('html/config.php');?>
 <!DOCTYPE html>
