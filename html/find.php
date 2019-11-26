@@ -7,7 +7,11 @@ try{
   echo $e->getMessage().PHP_EOL;
 }
 //駅名のセッションを変数にいれる
-$station = $_SESSION['stationname'];
+if(isset($_SESSION['stationname'])){
+$station = $_SESSION['stationname']
+}else{
+exit;
+}
 //検索値をDBと照らし合わせて結果を出力
 foreach ($pdo->query("select * from information where station = '{$station}'") as $row) {
   echo "<div class='stores'>";
