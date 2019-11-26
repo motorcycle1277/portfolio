@@ -29,8 +29,10 @@
         <input type="submit" value="送信">
         <?php
       echo '<div class="tenpo">';
+      if(isset($_SESSION['stationname']){
       if($_SESSION['stationname'] == "nagoya" || "tokyo" || "oosaka"){
         require_once("html/find.php");
+       }
       }
       echo '</div>';
       ?>
