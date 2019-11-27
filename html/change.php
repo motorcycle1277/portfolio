@@ -31,8 +31,9 @@ if(!isset($_SESSION['EMAIL'])){
       <input type="password" name="password" value="" required="required" placeholder="Password">
     </div>
     <div class="button-panel">
-      <input type="submit" value="送信">
+      <input class="button" type="submit" value="変更">
     </div>
+  </div>
     </form>
   </body>
 </html>
