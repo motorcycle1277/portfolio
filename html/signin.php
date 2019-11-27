@@ -4,7 +4,7 @@ function h($s){
   return htmlspecialchars($s,ENT_QUOTES,'utf-8');
 }
 //セッション開始
-  session_start();
+session_start();
 //すでにログインしているユーザーの処理
 if(isset($_SESSION['EMAIL'])){
   echo "ようこそ".h($_SESSION['EMAIL'])."さん<br>";
@@ -15,31 +15,48 @@ if(isset($_SESSION['EMAIL'])){
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>カフェ勉 for auwifi|ログイン</title>
-  </head>
-  <body>
-    <ul>
-      <li class="headlink"><a href="../index.php">トップページ</a></li>
-    </ul>
+<head>
+  <meta charset="utf-8">
+  <title>カフェ勉 for auwifi|ログイン</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <ul class="link">
+    <li class="headlink"><a href="../index.php">トップページ</a></li>
+  </ul>
+  <div class="form-wrapper">
     <h1>ログイン</h1>
     <form action="login.php" method="post">
-      <label for="id">メールアドレス</label>
-      <input type="text" name="email" value="">
-      <label for="password">パスワード</label>
-      <input type="text" name="password" value="">
-      <input type="submit" value="ログイン">
-    </form>
-    <h1>初めての方</h1>
-    <form action="signup.php" method="post">
-      <label for="id">メールアドレス</label>
-      <input type="text" name="email" value="">
-      <label for="password">パスワード</label>
-      <input type="text" name="password" value="">
-      <label for="name">ニックネーム</label>
-      <input type="text" name="name" value="">
-      <input type="submit" value="新規登録">
-    </form>
-  </body>
+      <div class="form-item">
+        <label for="id"></label>
+        <input type="email" name="email" value="" required="required" placeholder="Email">
+      </div>
+      <div class="form-item">
+      <label for="password"></label>
+      <input type="password" name="password" value="" required="required" placeholder="Password">
+    </div>
+    <div class="button-panel">
+      <input type="submit" class="button" title="Sign In" value="Sign In">
+    </div>
+  </form>
+  <h1>新規登録</h1>
+  <form action="signup.php" method="post">
+    <div class="form-item">
+      <label for="id"></label>
+      <input type="email" name="email" value="" required="required" placeholder="Email">
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <input type="password" name="password" value="" required="required" placeholder="Password">
+    </div>
+    <div class="form-item">
+      <label for="name"></label>
+      <input type="text" name="name" value="" required="required" placeholder="Nickname">
+    </div>
+    <div class="button-panel">
+      <input type="submit" class="button" title="Sign Up" value="Sign Up">
+    </div>
+  </form>
+</div>
+</body>
 </html>

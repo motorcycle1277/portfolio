@@ -20,13 +20,15 @@
     <div class="clear"></div>
     <main>
       <form action="html/stationdata.php" method="post">
-        <label for="stationfind">駅選択</label>
+        <label for="stationfind">駅選択:</label>
         <select name="stationfind" id="stationfind">
           <option value="nagoya">名古屋</option>
           <option value="tokyo">東京</option>
           <option value="oosaka">大阪</option>
         </select>
         <input type="submit" value="送信">
+      </form>
+      <br>
         <?php
       echo '<div class="tenpo">';
       if(isset($_SESSION['stationname'])){
@@ -39,7 +41,7 @@
     </main>
     <footer>
       <hr>
-      <p>利用規約、プライバシーポリシー、お問い合わせ</p>
+      <a href="html/about.html" class="index-footer">カフェ勉forauwifiの使い方</a>
     </footer>
   </body>
 </html>
