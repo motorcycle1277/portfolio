@@ -70,9 +70,8 @@ li{
 .index-footer{
   text-decoration: none;
   color: black;
-  fontsize:10px;
 }
-.index-footer :hover{
+.index-footer:hover{
   color:blue;
 }
 /*detail用のCSS*/
