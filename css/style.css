@@ -71,7 +71,7 @@ li{
   text-decoration: none;
   color: black;
 }
-.index-footer:hover{
+.index-footer a:hover{
   color:blue;
 }
 /*detail用のCSS*/
